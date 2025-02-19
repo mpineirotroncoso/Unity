@@ -59,7 +59,7 @@
     <UnityVersion>2022.3.55f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/home/dam/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.5/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/home/dam/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.0/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/home/dam/Unity/Hub/Editor/2022.3.55f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/home/dam/Unity/Hub/Editor/2022.3.55f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -68,6 +68,7 @@
     <Compile Include="Assets/Scripts/Void.cs" />
     <Compile Include="Assets/Scripts/Rotator.cs" />
     <Compile Include="Assets/Scripts/HorizontalRotator.cs" />
+    <Compile Include="Assets/Scripts/ElevatorController.cs" />
     <Compile Include="Assets/Scripts/PlayerController.cs" />
     <Compile Include="Assets/Scripts/CameraController1st.cs" />
     <Compile Include="Assets/Scripts/VirtualJoystick.cs" />

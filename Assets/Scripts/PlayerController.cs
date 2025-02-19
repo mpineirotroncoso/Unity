@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour
         // Comprobar qué cámara está activada
         if (mainCamera.enabled)
         {
+            joystick.gameObject.SetActive(true);
+
             Vector3 cameraForward = mainCamera.transform.forward;
             Vector3 cameraRight = mainCamera.transform.right;
 
@@ -72,9 +74,28 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            joystick.gameObject.SetActive(false);
+
             // Modo tercera persona
             Vector3 movement = new Vector3(finalX, 0.0f, finalY);
             rb.AddForce(movement * speed);
+
+            // Tambien añadir movimiento por acelerometro
+            Vector3 dir = Vector3.zero;
+            int accelSpeed = 5;
+
+            dir.x = Input.acceleration.x; // Adjusted to match expected behavior
+            dir.z = Input.acceleration.y; // Adjusted to match expected behavior
+
+            // Clamp acceleration vector to unit sphere
+            if (dir.sqrMagnitude > 1)
+                dir.Normalize();
+
+            // Make it move 10 meters per second instead of 10 meters per frame...
+            dir *= Time.deltaTime;
+
+            // Move object
+            playerTransform.Translate(dir * accelSpeed, Space.World);
         }
     }
 
@@ -168,7 +189,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Acelerator"))
         {
             // fuerza hacia la derecha
-            rb.AddForce(new Vector3(10000, 0, 0));
+            rb.AddForce(new Vector3(1000, 0, 0));
         }
     }
 

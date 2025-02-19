@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Acelerator
   - Bullet
+  - Elevator
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,7 @@ public class HorizontalRotator : MonoBehaviour
 
             Vector3 tamano = new Vector3(0.5f, 0.5f, 0.5f);
 
-for (int i = 0; i < 2; i++)
+for (int i = 0; i < 1; i++)
 {
     GameObject bullet = GameObject.CreatePrimitive(PrimitiveType.Sphere);
     bullet.transform.position = playerTransform.position + new Vector3(0, 1, 0);
