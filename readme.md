@@ -56,4 +56,4 @@ Este script maneja la interacción con la zona de "Void", que teletransporta los
 
 ## Licencia
 
-[WTFPL]()
+[WTFPL](LICENSE)
